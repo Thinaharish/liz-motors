@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   
+    <title>Happy Coaching</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav id="navbar">
+                <a href="index.html"><img src="./assets/liz.png" class="main-logo"></a>
+                <div class="nav-links" id="navLinks">
+                    <div class="close">
+                        <img src="./assets/xmark-solid.svg" class="icon" alt="image SVG" onclick="hideMenu()">
+                    </div>
+                    <ul>
+                        <li><a class="nav-content" href="index.html">Home</a></li>
+                    </ul>
+                </div>
+                  <div class="toggleNavbar">
+                     <img src="./assets/bars-solid.svg" class="icon" id="" alt="image SVG" onclick="showMenu()">
+                  </div>
+            </nav>
+        </div>
+    </header>
+    <section class="hero-banner">
+        <div class="container">
+            <div class="zig-zag">
+            <img src="./assets/Vector.png" class="zig-zag-img" alt="image SVG">
+        </div>
+            <div class="hero-banner-content">
+                <div class="banner-text-content">
+                    <h2>Drive the Difference.</h2>
+                    <h1>Manufacturing
+                    </h1>
+                    <p> Manufacturing is the heartbeat of our operations, where innovation meets precision to bring our vision to life. </p>
+                </div>
+                <div class="banner-image-content">
+                    <div class="success-rate animation-div">
+                         <img src="./assets/target.png" class="target-image">
+                         <div class="success-rate-text">
+                         <h1>100%</h1>
+                         <h2>Secured Build</h2>
+                        </div>
+                    </div>
+                    <img src="./assets/photo-1593106410288-caf65eca7c9d.avif" class="banner-main-image animation-effect" alt="image SVG">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="free-guide-banner">
+        <div class="container">
+            <div class="guide-banner-content">
+                <div class="guide-text-content">
+                    <h1>Manufacturing Materials</h1>
+                    <h2>
+                        Manufacturing materials is a strategic decision aimed at optimizing performance, safety, and sustainability in our vehicles. We carefully evaluate a variety of materials, including lightweight alloys, advanced composites, and eco-friendly alternatives, to meet the diverse needs of our customers and the demands of modern automotive design. </h2>
+                 
+                </div>
+                <div data-aos="fade-down" data-aos-duration="2000" data-aos-once="false"class="guide-image-content">
+                    <img src="./assets/factory-digitalization-two-industrial-engineers-600nw-2248569293.webp" class="guide-banner">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="free-guide-banner">
+        <div class="container">
+            <div class="guide-banner-content inverse">
+                <div class="guide-text-content">
+                    <h1>Production Processes</h1>
+                    <h2>our production processes are meticulously designed and executed to ensure the highest standards of quality, efficiency, and safety. We employ a combination of advanced technologies, lean manufacturing principles, and skilled craftsmanship to streamline production and maximize output without compromising on quality. </h2>
+                </div>
+                <div data-aos="fade-down" data-aos-duration="2000" data-aos-once="false"class="guide-image-content">
+                    <img src="./assets/industrial-high-tech-equipment-in-production-in-a-workshop-at-a-factory-free-photo.jpg" class="guide-banner">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+          <div class="all-footer-content">
+            <div class="company-detail">
+                <div class="social-media">
+                <img src="./assets/liz.png" class="footer-logo"  alt="image SVG">
+                </div>
+              <h1>Driving Innovation, Crafting Excellence</h1>  
+            </div>
+                <div class="main-information">
+                <div class="information">
+                  <h2>Page</h2>
+                  <ul>
+                      <li><a href="">Home</a></li>
+                      <li><a href="">Services</a></li>
+                      <li><a href="">About us</a></li>
+                      <li><a href="">Extra sales/Landing slide</a></li>
+                      <li><a href="">Free guide</a></li>
+                  </ul>
+                </div>
+                <div class="information">
+                <h2>Contact</h2>
+                <ul>
+                    <li><a href="">+123 456 789</a></li>
+                    <li><a href="">hello@lizmotors.nl</a></li>
+                    <li><a href=""> Instagram</a></li>
+                    <li><a href=""> LinkedIn</a></li>
+                </ul>
+                </div>
+            </div>
+           
+          </div>
+        
+      </footer>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+      <script src="script.js" defer></script>
+      <script>
+   $(document).ready(function () {
+    var $customerRating = $(".customer-rating");
+
+    function setFadedClass() {
+      
+        $customerRating.find('.customer-feedback').removeClass('faded');
+
+        var $currentItem = $customerRating.find('.owl-item.active');
+        $currentItem.not(':first').find('.customer-feedback').addClass('faded');
+    }
+
+    $customerRating.owlCarousel({
+        loop: true,
+        responsiveClass: true,
+        nav: false,
+        responsive: {
+            320: {
+                items: 1,
+                nav: false
+            },
+            768: {
+                items: 2,
+                nav: false,
+                loop: false
+            },
+            1024: {
+                items: 2,
+                nav: false,
+                loop: false
+            },
+            1440: {
+                items: 3,
+                nav: true
+            }
+            
+        },
+        onInitialized: setFadedClass, 
+        onTranslated: setFadedClass 
+    });
+});
+
+    
+    </script>
+    
+    
+</body>
+</html>
